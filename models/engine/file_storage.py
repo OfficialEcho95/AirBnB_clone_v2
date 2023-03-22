@@ -63,3 +63,4 @@ class FileStorage:
         obj = obj.to_dict()
         key = f"{obj['__class__']}.{obj['id']}"
         del FileStorage.__objects[key]
+
