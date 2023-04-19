@@ -37,5 +37,12 @@ def python(text="is cool"):
     return "Python {}".format(text)
 
 
+@app.route('/number/<n>', strict_slashes=False)
+def number_n(n):
+    """Displays n is a number if n is a number"""
+    if (type(n) == int):
+        return "{} is a number".format(n)
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
