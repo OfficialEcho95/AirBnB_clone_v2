@@ -19,6 +19,12 @@ def hello_hbnb():
     """function that returns hbnb"""
     return 'HBNB'
 
+
+@app.route('/c/<text>', strict_slashes=False)
+def text(text):
+    """function that returns hbnb"""
+    return 'C ' % escape(text)
+
 if __name__ == '__main__':
     # Run the app on 0.0.0.0, port 5000
     app.run(host='0.0.0.0', port=5000)
