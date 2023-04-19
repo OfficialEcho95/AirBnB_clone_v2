@@ -16,7 +16,7 @@ class Amenity(BaseModel, Base):
     if storage_type == 'db':
         from models.place import place_amenity
         name = Column(String(128), nullable=False)
-        place_amenities = relationship("Place", secondary=place_amenity,
-                                       back_populates="amenities")
+        place_amenities = relationship("Place", secondary="place_amenity",
+                                       backref="amenities")
     else:
         name = ""

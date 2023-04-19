@@ -31,6 +31,7 @@ class Place(BaseModel, Base):
             secondary='place_amenity',
             viewonly=False)
 
+    
     @property
     def reviews(self):
         """
@@ -43,6 +44,7 @@ class Place(BaseModel, Base):
             if self.id == value.place_id:
                 objs.append(str(value))
         return objs
+
 
     @property
     def amenities(self):
@@ -58,6 +60,7 @@ class Place(BaseModel, Base):
             if value.id in self.amenity_ids:
                 objs.append(str(value))
         return objs
+    
 
     @amenities.setter
     def amenities(self, obj):
