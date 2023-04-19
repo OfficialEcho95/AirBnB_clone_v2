@@ -18,13 +18,13 @@ def hello_hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def text(text):
-    """function that returns hbnb"""
+    """function that returns the value if of text"""
     text = text.replace('_', ' ')
     return 'C {}'.format(text)
 
 
 @app.route('/python/', defaults={'text': 'is cool'})
-@app.route('/python/(<text>)', strict_slashes=False)
+@app.route('/python/(<string:text>)', strict_slashes=False)
 def python_text(text):
     """function that returns hbnb"""
     text = text.replace('_', ' ')
