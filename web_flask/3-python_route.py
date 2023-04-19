@@ -1,4 +1,7 @@
 from flask import Flask
+"""
+this module receives a text and prints it
+"""
 
 # Create a Flask app
 app = Flask(__name__)
