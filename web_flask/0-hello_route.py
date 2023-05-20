@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Route for the root URL
 
 
-@app.route('/', strict_slashes=False)
+@app.route('/airbnb-onepage/', strict_slashes=False)
 def hello():
     """function that contains the flask command"""
     return 'Hello HBNB!'
